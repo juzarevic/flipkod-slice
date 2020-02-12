@@ -1,0 +1,67 @@
+$inuit-base-line-height: 30px;
+
+@function triple($inuit-number) {
+  @return round($inuit-number * 3);
+}
+
+@import "../../node_modules/inuit-defaults/settings.defaults";
+@import "../../node_modules/inuit-functions/tools.functions";
+@import "../../node_modules/inuit-mixins/tools.mixins";
+@import "../../node_modules/inuit-normalize/generic.normalize";
+@import "../../node_modules/inuit-box-sizing/generic.box-sizing";
+@import "../../node_modules/inuit-page/base.page";
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Raleway:300,400&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+
+  a {
+    text-decoration: none;
+  }
+
+  .icon-search {
+    height: 23px;
+    width: 23px;
+    background-color: transparent;
+    border: none;
+    background-image: url("../img/icon-search.svg");
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: triple($inuit-base-line-height);
+
+    font-size: 11px;
+    font-weight: 400;
+    background-color: #D0D0D0;
+
+    padding: 0 100px;
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+
+      a {
+        margin: halve($inuit-base-line-height);
+        color: #ffffff;
+        text-transform: uppercase;
+
+        &:first-child {
+          margin-left: auto;
+        }
+      }
+    }
+
+    .icon-search{
+      margin-left: $inuit-base-line-height;
+
+    }
+
+  }
+}
+
